@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    short int num1, num2;
+    int num1, num2;
     num1 = 32767 + 1;
     num2 = -32768 - 1;
     printf("num1 = %d\n", num1);
