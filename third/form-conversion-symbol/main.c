@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-int main(){
+#pragma warning(disable:4996)
+
+int main() {
     printf("%c\n", 'a');
     printf("%d\n", -123);
     printf("%o\n", 123);
