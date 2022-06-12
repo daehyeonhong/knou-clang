@@ -1,16 +1,13 @@
 #include <stdio.h>
 
-void fcn1();
-
 void main() {
-    int i = 10;
-    printf("\n main i = %d", i);
-    fcn1();
-    printf("\n main i = %d", i);
-}
-
-void fcn1() {
-    int i;
-    i = 20;
-    printf("\n fcn1 i = %d", i);
+    int x = 2, y = 4;
+    printf("A: x=%d, y=%d\n", x, y);
+    {
+        int x;
+        x = 5;
+        y++;
+        printf("B: x=%d, y=%d\n", x, y);
+    }
+    printf("A: x=%d, y=%d\n", x, y);
 }
