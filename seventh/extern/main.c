@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-int i = 10;
-int j = 20;
+#pragma warning(disable:4996)
 
-int main() {
-    extern int i;
-    extern int k;
+void extern_ex();
 
-    int j = 100;
-    printf("i = %d j = %d k = %d", i, j, k);
+char s[100];
+
+void main() {
+    printf("please insert string : ");
+    scanf("%s", s);
+    printf("input string %s is saved extern Variable s\n", s);
+    extern_ex();
 }
-
-int k = 50;
