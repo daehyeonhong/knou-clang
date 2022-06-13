@@ -1,11 +1,20 @@
 #include <stdio.h>
 
+test();
+
 void main() {
-    int a = 10;
-    static int b = 20;
-    {
-        int a = 5;
-        printf("a = %d b = %d\n", a, b);
+    int i;
+    i = 0;
+    while (i < 3) {
+        test();
+        i++;
     }
-    printf("a = %d b = %d\n", a, b);
+}
+
+test() {
+    auto int a = 0;
+    static int s = 0;
+    printf("auto=%d, static=%d\n", a, s);
+    ++a;
+    ++s;
 }
