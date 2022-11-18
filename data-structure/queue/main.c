@@ -15,6 +15,14 @@ void Add_q(int *rear, element item) {
     return;
 }
 
+element Delete_q(int *front, int rear) {
+    if (*front == rear) {
+        printf("Queue is empty\n");
+        return 0;
+    }
+    return (queue[++(*front)]);
+}
+
 int main() {
     printf("Hello, World!\n");
     return 0;
