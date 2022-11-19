@@ -4,7 +4,20 @@
 struct linked_list_node {
     int data;
     struct linked_list_node *link;
+
 };
+
+void addNode(struct linked_list_node *H, int X) {
+    if (H->head == NULL) {
+        H->head = NewNode;
+        return;
+    }
+    LastNode = H->head;
+    while (LastNode->linl != NULL)
+        LastNode = LastNode->link;
+    LastNode->link = NewNode;
+
+}
 
 int main() {
     int a, *p_a;
@@ -19,6 +32,6 @@ int main() {
     printf("a is %d, b is %f\n", *p_a, *p_b);
     free(p_a);
     free(p_b);
-    printf("a is %d, b is %f\n", *p_a, *p_b);
+
     return 0;
 }
