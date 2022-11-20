@@ -1,23 +1,27 @@
 #include <stdio.h>
 #include <malloc.h>
 
+typedef struct ListNode {
+    int data;
+    struct ListNode *link;
+} listNode;
+typedef struct {
+    listNode *head;
+} linkedList_h;
+
+
+linkedList_h *createLinkedList_h(void) {
+    linkedList_h *H;
+    H = (linkedList_h *) malloc(sizeof(linkedList_h));
+    H->head = NULL;
+    return H;
+}
+
 struct linked_list_node {
     int data;
     struct linked_list_node *link;
 
 };
-
-void addNode(struct linked_list_node *H, int X) {
-    if (H->head == NULL) {
-        H->head = NewNode;
-        return;
-    }
-    LastNode = H->head;
-    while (LastNode->linl != NULL)
-        LastNode = LastNode->link;
-    LastNode->link = NewNode;
-
-}
 
 int main() {
     int a, *p_a;
