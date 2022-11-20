@@ -23,6 +23,14 @@ struct linked_list_node {
 
 };
 
+void addFirstNode(linkedList_h *H, int x) {
+    listNode *tempNode;
+    listNode *newNode;
+    newNode = (listNode *) malloc(sizeof(listNode));
+    newNode->data = x;
+    newNode->link = NULL;
+}
+
 int main() {
     int a, *p_a;
     float b, *p_b;
