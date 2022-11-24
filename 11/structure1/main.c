@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-struct score {
+typedef struct score {
     char no[4];
     char name[8];
     int kor;
     int eng;
     int math;
     int hist;
-} X, Y;
+} jumsu;
 
 int main() {
-    printf("Hello, World!\n");
+    jumsu X, Y;
     return 0;
 }
