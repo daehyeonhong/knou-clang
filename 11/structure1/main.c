@@ -7,7 +7,7 @@ struct score {
     int eng;
     int math;
     int hist;
-};
+} X, Y;
 
 int main() {
     printf("Hello, World!\n");
