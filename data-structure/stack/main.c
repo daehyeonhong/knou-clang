@@ -13,6 +13,14 @@ element pop() {
     return stack[top--];
 }
 
+void push(element item) {
+    if (top >= STACK_SIZE - 1) {
+        printf("Stack is full\n");
+        return;
+    }
+    stack[++top] = item;
+}
+
 int main() {
     printf("Hello, World!\n");
     return 0;
