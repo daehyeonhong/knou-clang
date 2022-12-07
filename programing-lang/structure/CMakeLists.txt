@@ -3,4 +3,4 @@ project(structure C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(structure main.c)
+add_executable(structure main.c variable.c)
