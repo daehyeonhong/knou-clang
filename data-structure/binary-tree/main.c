@@ -25,7 +25,19 @@ int main() {
 int get_node_count(nodeptr *root) {
     if (root == null) return 0;
     int result = 1;
-    result = get_node_count((nodeptr*)root->left)
-           + get_node_count((nodeptr*)root->right);
+    result = get_node_count((nodeptr * )
+    root->left)
+    +get_node_count((nodeptr * )
+    root->right);
+    return result;
+}
+
+int get_leaf_count(nodeptr *root) {
+    int result = 0;
+    if (root == null) return 0;
+    else if (root->left == null && root->right == null) return 1;
+    result = get_node_count((nodeptr * )
+    root->left)
+    +get_node_count((nodeptr * );
     return result;
 }
