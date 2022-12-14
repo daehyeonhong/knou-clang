@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 struct KNode {
     struct KNode *left;
@@ -13,6 +14,13 @@ void Inorder(struct KNode *rootptr) {
         printf("%d", rootptr->info);
         Inorder(rootptr->right);
     }
+}
+
+struct KNode *Search(char k[], struct KNode *r) {
+    if (r == NULL) return NULL;
+    else if (strcmp(k, r->key) == 0) return r;
+    else if (strcmp(k, r->key) < 0) return Search(k, r->left);
+    else return Search(k, r->right);
 }
 
 int main() {
